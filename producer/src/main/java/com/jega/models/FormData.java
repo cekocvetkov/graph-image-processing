@@ -1,12 +1,15 @@
 package com.jega.models;
 
-import java.io.File;
 import jakarta.ws.rs.core.MediaType;
 import lombok.Getter;
+import lombok.ToString;
 import org.jboss.resteasy.reactive.PartType;
 import org.jboss.resteasy.reactive.RestForm;
 
+import java.io.File;
+
 @Getter
+@ToString
 public class FormData {
     
     @RestForm("file")

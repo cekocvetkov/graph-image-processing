@@ -3,21 +3,21 @@ package com.jega.config;
 import io.smallrye.config.ConfigMapping;
 import io.smallrye.config.WithName;
 
-@ConfigMapping( prefix = "aws" )
-public interface AWSConfig
-{
-    @WithName( "bucket-name" )
+@ConfigMapping(prefix = "aws")
+public interface AWSConfig {
+    @WithName("endpoint-override")
+    String getEndpointOverride();
+
+    @WithName("bucket-name")
     String getBucketName();
-    
-    @WithName( "bucket-region" )
+
+    @WithName("bucket-region")
     String getBucketRegion();
-    
-    
-    @WithName( "access-key" )
+
+    @WithName("access-key")
     String getAccessKey();
-    
-    
-    @WithName( "secret-access-key" )
+
+    @WithName("secret-access-key")
     String getSecretAccessKey();
-    
+
 }

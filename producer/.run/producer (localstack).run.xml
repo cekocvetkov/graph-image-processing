@@ -1,5 +1,5 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="producer (local)prod" type="GradleRunConfiguration" factoryName="Gradle">
+  <configuration default="false" name="producer (localstack)" type="GradleRunConfiguration" factoryName="Gradle">
     <ExternalSystemSettings>
       <option name="env">
         <map>
@@ -7,7 +7,6 @@
           <entry key="aws.bucket-name" value="s3-dev-bucket" />
           <entry key="aws.bucket-region" value="eu-west-1" />
           <entry key="aws.secret-access-key" value="dev" />
-          <entry key="quarkus.profile" value="prod" />
         </map>
       </option>
       <option name="executionName" />
