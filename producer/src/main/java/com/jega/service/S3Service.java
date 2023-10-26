@@ -17,9 +17,9 @@ import java.util.stream.Collectors;
 @ApplicationScoped
 public class S3Service {
     private static final Logger LOG = Logger.getLogger(S3Service.class);
-    AWSConfig config;
-    S3Client s3;
-    S3ObjectRequestsBuilder requestsBuilder;
+    private AWSConfig config;
+    private S3Client s3;
+    private S3ObjectRequestsBuilder requestsBuilder;
 
     public S3Service(AWSConfig config, S3Client s3, S3ObjectRequestsBuilder requestsBuilder) {
         this.config = config;

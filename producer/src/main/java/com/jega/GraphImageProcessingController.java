@@ -38,11 +38,12 @@ public class GraphImageProcessingController {
         return Response.status(Response.Status.CREATED).build();
 
     }
-    
+
     @GET
     @Path("/list")
     @Produces(MediaType.APPLICATION_JSON)
     public List<FileObject> listFiles() {
+        LOG.info("Listing S3 object files");
         return s3Service.getS3ObjectsList();
     }
 
