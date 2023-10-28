@@ -3,11 +3,13 @@ package com.jega.models;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.ToString;
 import software.amazon.awssdk.services.s3.model.S3Object;
 
 @Getter
 @Setter
 @NoArgsConstructor
+@ToString
 public class FileObject {
     private String objectKey;
 
