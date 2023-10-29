@@ -15,11 +15,6 @@ public class RabbitMQTestResource implements QuarkusTestResourceLifecycleManager
     public Map<String, String> start() {
         rabbitMQContainer = new RabbitMQContainer(DockerImageName.parse("rabbitmq:3.12.7-management-alpine"));
         rabbitMQContainer.start();
-        System.out.println(rabbitMQContainer.getHost());
-        System.out.println(rabbitMQContainer.getAdminUsername());
-        System.out.println(rabbitMQContainer.getAdminPassword());
-        System.out.println(rabbitMQContainer.getAmqpPort());
-
         Map<String, String> conf = setApplicationEnvVariables();
         return conf;
     }
@@ -38,6 +33,4 @@ public class RabbitMQTestResource implements QuarkusTestResourceLifecycleManager
         conf.put("rabbitmq-password", rabbitMQContainer.getAdminPassword());
         return conf;
     }
-
-
 }

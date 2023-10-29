@@ -38,6 +38,7 @@ public class GraphImageProcessorService {
             throw new ServerErrorException("Problems while uploading to S3 bucket", Response.Status.INTERNAL_SERVER_ERROR);
         }
 
+        LOG.info("Sending " + formData.getFileName() + " to the queue");
         graphImageRequestEmitter.send(formData.getFileName());
     }
 
